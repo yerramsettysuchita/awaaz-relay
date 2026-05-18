@@ -1,14 +1,12 @@
 # Awaaz Relay
 
-**Multilingual AI copilot that helps frontline welfare workers in Tamil Nadu guide citizens through government pension applications — in their own language.**
-
-Live demo: [awaaz-relay.vercel.app](https://awaaz-relay.vercel.app) &nbsp;·&nbsp; API: [awaaz-relay-api.onrender.com](https://awaaz-relay-api.onrender.com)
+**Multilingual AI copilot that helps frontline welfare workers in Tamil Nadu guide citizens through government pension applications in their own language.**
 
 ---
 
 ## The Problem
 
-Over 10 million citizens in Tamil Nadu are eligible for government welfare pensions — widow pension, old age pension, disability pension, and nine other schemes. But the gap between eligibility and enrollment is huge.
+Over 10 million citizens in Tamil Nadu are eligible for government welfare pensions like widow pension, old age pension, disability pension, and nine other schemes. But the gap between eligibility and enrollment is huge.
 
 Frontline community workers who connect citizens to these schemes face three hard problems:
 
@@ -22,12 +20,12 @@ Awaaz Relay solves all three at once.
 
 ## What It Does
 
-A worker submits a query — by typing, uploading a photo of a government form, or speaking in their language. The system:
+A worker submits a query by typing, uploading a photo of a government form, or speaking in their language. The system:
 
 1. Reads the input (OCR for images via Gemini Vision, speech-to-text for voice)
 2. Searches 214 verified government facts using semantic similarity + BM25 keyword retrieval
 3. Sends the retrieved facts + query to Gemini to generate a structured response
-4. Returns a **dual output** — an actionable checklist for the worker, and a plain-language explanation for the citizen — in the correct language
+4. Returns a **dual output** an actionable checklist for the worker, and a plain-language explanation for the citizen in the correct language
 
 Every response shows the source facts it was grounded on. If confidence drops below 40%, guidance is suppressed and the helpline is shown instead.
 
@@ -56,13 +54,13 @@ Every response shows the source facts it was grounded on. If confidence drops be
 User (text / image / voice)
         │
         ▼
-┌─────────────────────────────────────────────────────────┐
+┌───────────────────────────────────────────────────────── ┐
 │  React + Vite  (Vercel)                                  │
-│  InputPanel → App.jsx → ConfidenceCard, WorkerCard, … │
-└────────────────────┬────────────────────────────────────┘
+│  InputPanel → App.jsx → ConfidenceCard, WorkerCard, …    │
+└────────────────────┬──────────────────────────────────── ┘
                      │ POST /analyze (FormData)
                      ▼
-┌─────────────────────────────────────────────────────────┐
+┌───────────────────────────────────────────────────────── ┐
 │  FastAPI  (Render)                                       │
 │                                                          │
 │  input_processor.py  →  CaseInput                        │
@@ -70,14 +68,14 @@ User (text / image / voice)
 │                                                          │
 │  retriever.py  →  RetrievalResult                        │
 │        Semantic: cosine on gemini-embedding-001 vectors  │
-│        Fallback: BM25 with category boost               │
+│        Fallback: BM25 with category boost                │
 │                                                          │
 │  gemma_orchestrator.py  →  GemmaResponse                 │
 │        Gemini model chain, structured JSON output        │
 │                                                          │
 │  safety_scorer.py  →  SafetyScorerOutput                 │
 │        Confidence blend, escalation gate, evidence panel │
-└─────────────────────────────────────────────────────────┘
+└───────────────────────────────────────────────────────── ┘
 ```
 
 **Confidence formula:** `(retrieval_score × 0.6) + (gemini_self_estimate × 0.4)`
@@ -238,9 +236,9 @@ awaaz-relay/
 
 ## Safety Design
 
-- Confidence < 40% — answer suppressed, helpline number shown
+- Confidence < 40% then the answer is suppressed, helpline number shown
 - Every response shows source rule IDs and confidence scores
-- No hallucination without retrieval grounding — model chain only generates after facts are retrieved
+- No hallucination without retrieval grounding model chain only generates after facts are retrieved
 - Explicit disclaimer on every response: not legal advice
 - Rate limiting: 20 requests per minute per IP, persisted to SQLite
 
