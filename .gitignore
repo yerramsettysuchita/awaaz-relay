@@ -1,0 +1,38 @@
+.env
+*.pyc
+__pycache__/
+.venv/
+venv/
+node_modules/
+dist/
+build/
+*.mp4
+*.log
+.DS_Store
+Thumbs.db
+backend/tests/__pycache__/
+
+# Test and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Runtime data (mounted as Docker volumes in production)
+data/awaaz_relay.db
+data/embeddings_cache.json
+
+# Raw source PDFs and test images — too large for git
+data/government_sources/*
+!data/government_sources/.gitkeep
+data/knowledge_base_from_pdfs.json
+
+# Test images — generated locally, not committed (run generate_test_images.py)
+data/sample_forms/*.png
+data/sample_forms/*.jpg
+
+# Frontend build output
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/

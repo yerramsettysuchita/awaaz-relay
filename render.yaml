@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: awaaz-relay-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: DEMO_MODE
+        value: "false"
+      - key: CORS_ORIGINS
+        sync: false
+    disk:
+      name: awaaz-data
+      mountPath: /app/data
+      sizeGB: 1

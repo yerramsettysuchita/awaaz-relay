@@ -1,0 +1,49 @@
+services:
+
+  # ── Backend ─────────────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env           # GOOGLE_API_KEY, DEMO_MODE — never committed to git
+    environment:
+      # CORS must allow the frontend origin.
+      # Override CORS_ORIGINS in .env if your frontend runs on a different port.
+      CORS_ORIGINS: "http://localhost:3000"
+    volumes:
+      # Mount the data directory so the knowledge base, embeddings cache,
+      # and SQLite database (rate limits + feedback) persist between restarts.
+      - ./data:/app/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    restart: unless-stopped
+
+  # ── Frontend ─────────────────────────────────────────────────────────────────
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        # Backend URL as seen from the browser (not from inside Docker network)
+        VITE_API_URL: "http://localhost:8000"
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy   # waits for /health to return 200
+    restart: unless-stopped
+
+# ── Quick-start ──────────────────────────────────────────────────────────────
+# 1. cp .env.example .env && fill in GOOGLE_API_KEY
+# 2. docker compose up --build
+# 3. Open http://localhost:3000
+#
+# To run with demo mocks (no API key needed):
+#   DEMO_MODE=true docker compose up --build

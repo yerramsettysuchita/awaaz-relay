@@ -1,0 +1,35 @@
+# Git history — large, never needed inside an image
+.git/
+.github/
+
+# Python cache and test artifacts
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.pyc
+backend/*.pyo
+backend/.pytest_cache/
+backend/.mypy_cache/
+
+# Node modules — reinstalled inside the builder stage
+frontend/node_modules/
+
+# Vite build output — rebuilt inside the builder stage
+frontend/dist/
+
+# Secrets — must never be baked into an image
+.env
+backend/.env
+
+# Runtime data that should be mounted as volumes, not baked in
+data/awaaz_relay.db
+data/embeddings_cache.json
+
+# Documentation and planning — not needed at runtime
+docs/
+video/
+*.md
+!README.md
+
+# OS noise
+.DS_Store
+Thumbs.db

@@ -1,0 +1,2715 @@
+{
+  "facts": [
+    {
+      "rule_id": "PENSION_001",
+      "category": "eligibility",
+      "text": "An applicant must be a widow (husband deceased) to be eligible for the Tamil Nadu Widow Pension Scheme.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.98,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "widow",
+        "basic"
+      ]
+    },
+    {
+      "rule_id": "PENSION_002",
+      "category": "eligibility",
+      "text": "The applicant must be at least 18 years of age and not older than 65 years at the time of application.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.97,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "age",
+        "basic"
+      ]
+    },
+    {
+      "rule_id": "PENSION_003",
+      "category": "eligibility",
+      "text": "The applicant must not be earning more than ₹2,40,000 (₹2.4 lakhs) per annum from all sources combined.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.97,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "income",
+        "threshold"
+      ]
+    },
+    {
+      "rule_id": "PENSION_004",
+      "category": "eligibility",
+      "text": "A widow earning ₹3,500 per month earns ₹42,000 per year. This is well below the ₹2.4 lakh annual income limit and qualifies on income criteria.",
+      "source": "Derived from PENSION_003 eligibility calculation",
+      "confidence_base": 0.97,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "income",
+        "calculation",
+        "lakshmi"
+      ]
+    },
+    {
+      "rule_id": "PENSION_005",
+      "category": "eligibility",
+      "text": "The phrase '10+ years' standing' in the form is ambiguous. It may mean: (a) 10 years as a widow, (b) 10 years as a resident of the district, or (c) 10 years on the Below Poverty Line (BPL) list. This must be clarified with the local Block Development Office.",
+      "source": "Field reports, Tamil Nadu Social Welfare community worker feedback, 2023",
+      "confidence_base": 0.6,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "ambiguous",
+        "standing",
+        "escalate"
+      ]
+    },
+    {
+      "rule_id": "PENSION_006",
+      "category": "eligibility",
+      "text": "Widows who have remarried are NOT eligible for the widow pension scheme.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.98,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "remarriage",
+        "disqualifier"
+      ]
+    },
+    {
+      "rule_id": "PENSION_007",
+      "category": "eligibility",
+      "text": "Applicants must be a permanent resident of Tamil Nadu. Proof of residence (Aadhaar or ration card) is required.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.95,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "residence",
+        "documents"
+      ]
+    },
+    {
+      "rule_id": "PENSION_008",
+      "category": "documents",
+      "text": "Required documents: (1) Completed FORM 1-W application, (2) Aadhaar card (or alternative ID), (3) Husband's death certificate (original + 2 copies), (4) Bank passbook or account details, (5) Ration card (BPL preferred), (6) Passport-size photograph (2 copies).",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Document Checklist, 2024",
+      "confidence_base": 0.98,
+      "language": "en",
+      "tags": [
+        "documents",
+        "checklist",
+        "required"
+      ]
+    },
+    {
+      "rule_id": "PENSION_009",
+      "category": "documents",
+      "text": "If the applicant does not have an Aadhaar card, she may submit: Voter ID, Ration Card, or Government-issued residence certificate as alternative ID.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.9,
+      "language": "en",
+      "tags": [
+        "documents",
+        "aadhaar",
+        "alternative",
+        "important"
+      ]
+    },
+    {
+      "rule_id": "PENSION_010",
+      "category": "documents",
+      "text": "To obtain Aadhaar for the first time: Visit nearest Aadhaar Seva Kendra or Permanent Enrolment Centre. Bring any one of: Voter ID, Ration Card, Passport, Driving Licence. Process takes 5–10 working days.",
+      "source": "UIDAI (Unique Identification Authority of India) official guidelines, 2024",
+      "confidence_base": 0.92,
+      "language": "en",
+      "tags": [
+        "documents",
+        "aadhaar",
+        "how-to",
+        "process"
+      ]
+    },
+    {
+      "rule_id": "PENSION_011",
+      "category": "documents",
+      "text": "An old husband's death certificate (more than 5 years old) is still valid. The applicant does not need to obtain a new one unless the original is damaged or illegible.",
+      "source": "Tamil Nadu Social Welfare Department, FAQ on Document Validity, 2023",
+      "confidence_base": 0.88,
+      "language": "en",
+      "tags": [
+        "documents",
+        "death-certificate",
+        "validity"
+      ]
+    },
+    {
+      "rule_id": "PENSION_012",
+      "category": "income",
+      "text": "For daily wage workers and domestic workers, 'annual income' should be calculated as: average daily earnings × 250 working days. Daily workers should not count non-working days.",
+      "source": "Tamil Nadu Social Welfare Department, Income Calculation Guidance Note, 2023",
+      "confidence_base": 0.85,
+      "language": "en",
+      "tags": [
+        "income",
+        "calculation",
+        "daily-wage"
+      ]
+    },
+    {
+      "rule_id": "PENSION_013",
+      "category": "income",
+      "text": "Income from domestic work, farm labour, and informal trade must be declared. Income from adult children who live separately does NOT count toward the applicant's income.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.88,
+      "language": "en",
+      "tags": [
+        "income",
+        "family-income",
+        "clarification"
+      ]
+    },
+    {
+      "rule_id": "PENSION_014",
+      "category": "deadline",
+      "text": "The enrollment window for Tamil Nadu Widow Pension Scheme closes on June 30 each year. Applications received after this date are carried forward to the next enrollment cycle.",
+      "source": "Tamil Nadu Social Welfare Department, Annual Enrollment Notice, 2024",
+      "confidence_base": 0.95,
+      "language": "en",
+      "tags": [
+        "deadline",
+        "enrollment",
+        "important"
+      ]
+    },
+    {
+      "rule_id": "PENSION_015",
+      "category": "deadline",
+      "text": "If the June 30 deadline is missed, the next enrollment window opens in October. The applicant must wait approximately 8 months before her application can be processed.",
+      "source": "Tamil Nadu Social Welfare Department, Annual Enrollment Notice, 2024",
+      "confidence_base": 0.93,
+      "language": "en",
+      "tags": [
+        "deadline",
+        "consequences",
+        "wait"
+      ]
+    },
+    {
+      "rule_id": "PENSION_016",
+      "category": "benefits",
+      "text": "Approved widow pension amount: ₹1,000 per month, credited directly to the bank account provided in the application.",
+      "source": "Tamil Nadu Social Welfare Department, Widow Pension Scheme Benefits Summary, 2024",
+      "confidence_base": 0.95,
+      "language": "en",
+      "tags": [
+        "benefits",
+        "amount",
+        "payment"
+      ]
+    },
+    {
+      "rule_id": "PENSION_017",
+      "category": "benefits",
+      "text": "Pension is paid quarterly (every 3 months) via Direct Benefit Transfer (DBT) to the applicant's bank account. Applicant must have an active bank account linked to Aadhaar.",
+      "source": "Tamil Nadu Social Welfare Department, Widow Pension Scheme Benefits Summary, 2024",
+      "confidence_base": 0.93,
+      "language": "en",
+      "tags": [
+        "benefits",
+        "payment",
+        "dbt",
+        "bank"
+      ]
+    },
+    {
+      "rule_id": "PENSION_018",
+      "category": "process",
+      "text": "Application submission steps: (1) Fill FORM 1-W (available at Block Development Office or online), (2) Attach required documents, (3) Submit to the Block Development Officer or Collectorate Social Welfare office, (4) Receive acknowledgment receipt.",
+      "source": "Tamil Nadu Social Welfare Department, Application Process Guide, 2024",
+      "confidence_base": 0.96,
+      "language": "en",
+      "tags": [
+        "process",
+        "submission",
+        "steps"
+      ]
+    },
+    {
+      "rule_id": "PENSION_019",
+      "category": "process",
+      "text": "After submission, the application is verified within 30 working days. The applicant will be notified by letter or SMS if approved, rejected, or if additional documents are required.",
+      "source": "Tamil Nadu Social Welfare Department, Application Process Guide, 2024",
+      "confidence_base": 0.9,
+      "language": "en",
+      "tags": [
+        "process",
+        "timeline",
+        "verification"
+      ]
+    },
+    {
+      "rule_id": "PENSION_020",
+      "category": "process",
+      "text": "If additional documents are requested, the applicant has 15 working days to submit them from the date of the notification letter.",
+      "source": "Tamil Nadu Social Welfare Department, Application Process Guide, 2024",
+      "confidence_base": 0.88,
+      "language": "en",
+      "tags": [
+        "process",
+        "documents",
+        "follow-up"
+      ]
+    },
+    {
+      "rule_id": "PENSION_021",
+      "category": "contact",
+      "text": "Help and queries: Tamil Nadu Social Welfare Department helpline: 1800-425-1700 (toll-free, 9 AM–5 PM, Mon–Sat). Also available at: Block Development Office in your district.",
+      "source": "Tamil Nadu Social Welfare Department, Contact Directory, 2024",
+      "confidence_base": 0.94,
+      "language": "en",
+      "tags": [
+        "contact",
+        "helpline",
+        "escalate"
+      ]
+    },
+    {
+      "rule_id": "PENSION_022",
+      "category": "contact",
+      "text": "For Aadhaar-related queries: UIDAI helpline 1947 (toll-free). For nearest Aadhaar Seva Kendra: visit uidai.gov.in or call 1947.",
+      "source": "UIDAI, 2024",
+      "confidence_base": 0.96,
+      "language": "en",
+      "tags": [
+        "contact",
+        "aadhaar",
+        "uidai"
+      ]
+    },
+    {
+      "rule_id": "PENSION_023",
+      "category": "property",
+      "text": "Owning a small house or residential property does NOT disqualify the applicant. Only income-generating property (rented land, commercial property) must be declared. Residential land used for self-occupation is exempt.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.87,
+      "language": "en",
+      "tags": [
+        "property",
+        "eligibility",
+        "clarification"
+      ]
+    },
+    {
+      "rule_id": "PENSION_024",
+      "category": "children",
+      "text": "The checkbox 'Admit children to government scheme' refers to voluntary enrollment of dependent children (under 18) in Tamil Nadu government child welfare schemes. It is not a mandatory condition for pension approval.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Section 5 Explanation Note, 2023",
+      "confidence_base": 0.82,
+      "language": "en",
+      "tags": [
+        "children",
+        "checkbox",
+        "clarification"
+      ]
+    },
+    {
+      "rule_id": "PENSION_025",
+      "category": "safety",
+      "text": "SAFETY NOTE: Awaaz Relay cannot guarantee pension approval. All eligibility determinations are made by the Tamil Nadu Social Welfare Department. This tool provides information to help applicants prepare, not legal or administrative decisions.",
+      "source": "Awaaz Relay system policy",
+      "confidence_base": 1.0,
+      "language": "en",
+      "tags": [
+        "safety",
+        "disclaimer",
+        "always-include"
+      ]
+    },
+    {
+      "rule_id": "PENSION_026",
+      "category": "medical",
+      "text": "Health status questions in Section 6 are for informational purposes only. Chronic illness does not disqualify an applicant. Disability may make the applicant eligible for an enhanced rate — consult the Block Development Office.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.85,
+      "language": "en",
+      "tags": [
+        "health",
+        "disability",
+        "eligibility"
+      ]
+    },
+    {
+      "rule_id": "PENSION_027",
+      "category": "escalation",
+      "text": "Escalate to human officer when: (1) '10+ years standing' interpretation is unclear, (2) Applicant has no Aadhaar and no alternative ID, (3) Husband's death was unregistered, (4) Any legal dispute about property or marriage status.",
+      "source": "Awaaz Relay escalation policy, Field Worker Training Manual v2, 2024",
+      "confidence_base": 1.0,
+      "language": "en",
+      "tags": [
+        "escalation",
+        "always-escalate",
+        "policy"
+      ]
+    },
+    {
+      "rule_id": "PENSION_028",
+      "category": "eligibility",
+      "text": "Applicants already receiving any other pension (old-age pension, disability pension) are typically not eligible for the widow pension scheme simultaneously. Confirm with Block Development Office if already receiving benefits.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.88,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "dual-benefit",
+        "clarification"
+      ]
+    },
+    {
+      "rule_id": "PENSION_029",
+      "category": "language",
+      "text": "Tamil translation of key phrase: 'விதவை ஓய்வூதியத் திட்டம்' = Widow Pension Scheme. 'வருடாந்திர வருமானம்' = Annual income. 'ஆதார் அட்டை' = Aadhaar card. 'விண்ணப்பப் படிவம்' = Application form.",
+      "source": "Tamil Nadu Social Welfare Department, Tamil Glossary, 2024",
+      "confidence_base": 0.97,
+      "language": "ta",
+      "tags": [
+        "language",
+        "tamil",
+        "glossary"
+      ]
+    },
+    {
+      "rule_id": "PENSION_030",
+      "category": "language",
+      "text": "Tamil translation: '10 ஆண்டுகளுக்கும் மேலான நிலை' = '10+ years' standing'. This phrase in Tamil also lacks a standard interpretation and should be clarified with the office. Common understanding: 10 years as a widow resident in the state.",
+      "source": "Community worker feedback, Madurai district, 2023",
+      "confidence_base": 0.7,
+      "language": "ta",
+      "tags": [
+        "language",
+        "tamil",
+        "ambiguous",
+        "standing"
+      ]
+    },
+    {
+      "rule_id": "PENSION_031",
+      "category": "process",
+      "text": "Top 5 reasons applications are rejected: (1) Missing death certificate, (2) Income declared incorrectly or above limit, (3) Aadhaar name mismatch with ration card, (4) Bank account not in applicant's name, (5) Application submitted after June 30 deadline.",
+      "source": "Tamil Nadu Social Welfare Department, Field Officer FAQ, 2023",
+      "confidence_base": 0.88,
+      "language": "en",
+      "tags": [
+        "process",
+        "rejection",
+        "common-mistakes",
+        "important"
+      ]
+    },
+    {
+      "rule_id": "PENSION_032",
+      "category": "process",
+      "text": "Appeal process after rejection: (1) Collect rejection letter from Block Development Office, (2) File an appeal at the District Collectorate Social Welfare office within 30 days, (3) Attach original rejection letter and corrected documents, (4) Appeal is reviewed within 45 working days.",
+      "source": "Tamil Nadu Social Welfare Department, Grievance Redressal Policy, 2024",
+      "confidence_base": 0.85,
+      "language": "en",
+      "tags": [
+        "process",
+        "appeal",
+        "rejection",
+        "grievance"
+      ]
+    },
+    {
+      "rule_id": "PENSION_033",
+      "category": "process",
+      "text": "To check application status: (1) Visit Block Development Office with acknowledgment receipt, (2) Call helpline 1800-425-1700, (3) SMS 'TNPENSION <Application No.>' to 7676000100. Status options: PENDING / UNDER REVIEW / APPROVED / REJECTED.",
+      "source": "Tamil Nadu Social Welfare Department, Digital Services Guide, 2024",
+      "confidence_base": 0.84,
+      "language": "en",
+      "tags": [
+        "process",
+        "status",
+        "tracking",
+        "sms"
+      ]
+    },
+    {
+      "rule_id": "PENSION_034",
+      "category": "documents",
+      "text": "Bank account requirements: Must be in the applicant's name only. Zero-balance Jan Dhan accounts (Pradhan Mantri Jan Dhan Yojana) are accepted. Nearest bank: State Bank of India, Indian Bank, and Canara Bank accept Jan Dhan accounts without minimum balance.",
+      "source": "Ministry of Finance, Jan Dhan Yojana Guidelines, 2024",
+      "confidence_base": 0.9,
+      "language": "en",
+      "tags": [
+        "documents",
+        "bank",
+        "jan-dhan",
+        "zero-balance"
+      ]
+    },
+    {
+      "rule_id": "PENSION_035",
+      "category": "documents",
+      "text": "If husband's death was not officially registered: (1) Visit local Panchayat or Municipal office to register the death, (2) Bring 2 witnesses who knew the deceased, (3) Process takes 7–14 days. Late registration fee applies if death occurred more than 1 year ago.",
+      "source": "Tamil Nadu Registration Department, Death Certificate Guidance, 2024",
+      "confidence_base": 0.82,
+      "language": "en",
+      "tags": [
+        "documents",
+        "death-certificate",
+        "unregistered",
+        "process"
+      ]
+    },
+    {
+      "rule_id": "PENSION_036",
+      "category": "documents",
+      "text": "BPL (Below Poverty Line) ration card holders get priority processing and are exempt from some income documentation requirements. BPL card is strong proof of low income and is highly recommended to include.",
+      "source": "Tamil Nadu Food and Civil Supplies Department, BPL Guidelines, 2024",
+      "confidence_base": 0.87,
+      "language": "en",
+      "tags": [
+        "documents",
+        "bpl",
+        "ration-card",
+        "priority"
+      ]
+    },
+    {
+      "rule_id": "PENSION_037",
+      "category": "documents",
+      "text": "If birth certificate is missing for age proof, acceptable alternatives include: School Transfer Certificate (TC), Hospital birth record, Ration card with date of birth, Voter ID, or an affidavit from a gazetted officer.",
+      "source": "Tamil Nadu Social Welfare Department, Document Alternatives List, 2023",
+      "confidence_base": 0.85,
+      "language": "en",
+      "tags": [
+        "documents",
+        "age-proof",
+        "alternatives"
+      ]
+    },
+    {
+      "rule_id": "PENSION_038",
+      "category": "process",
+      "text": "After approval: Pension begins from the first day of the following month. First payment is deposited within 45 days of approval. Annual verification (life certificate) must be submitted every October to continue receiving pension.",
+      "source": "Tamil Nadu Social Welfare Department, Post-Approval Guidelines, 2024",
+      "confidence_base": 0.88,
+      "language": "en",
+      "tags": [
+        "process",
+        "post-approval",
+        "life-certificate",
+        "annual"
+      ]
+    },
+    {
+      "rule_id": "PENSION_039",
+      "category": "benefits",
+      "text": "Enhanced pension for disabled widows: If the widow has a disability of 40% or more (certified by a government medical officer), she may be eligible for an additional ₹500/month disability supplement, totaling ₹1,500/month.",
+      "source": "Tamil Nadu Social Welfare Department, Disability Benefits Circular, 2024",
+      "confidence_base": 0.8,
+      "language": "en",
+      "tags": [
+        "benefits",
+        "disability",
+        "enhanced",
+        "supplement"
+      ]
+    },
+    {
+      "rule_id": "PENSION_040",
+      "category": "process",
+      "text": "If pension payments stop unexpectedly: (1) Check if annual life certificate was submitted, (2) Verify bank account is active and linked to Aadhaar, (3) Visit Block Development Office with passbook and Aadhaar, (4) Call helpline 1800-425-1700.",
+      "source": "Tamil Nadu Social Welfare Department, Pension Continuation FAQ, 2024",
+      "confidence_base": 0.86,
+      "language": "en",
+      "tags": [
+        "process",
+        "stopped-pension",
+        "troubleshoot"
+      ]
+    },
+    {
+      "rule_id": "PENSION_041",
+      "category": "process",
+      "text": "Aadhaar-bank seeding (linking): Required for pension DBT. Process: Visit home bank branch with Aadhaar card and passbook. Banker will update. Confirmation SMS is sent within 3–5 days. Alternatively, update via bank's mobile app or ATM.",
+      "source": "NPCI (National Payments Corporation of India), Aadhaar Seeding Guide, 2024",
+      "confidence_base": 0.89,
+      "language": "en",
+      "tags": [
+        "documents",
+        "bank",
+        "aadhaar-seeding",
+        "dbt"
+      ]
+    },
+    {
+      "rule_id": "PENSION_042",
+      "category": "income",
+      "text": "Seasonal agricultural workers: For income calculation, only count months actually worked. A worker who farms for 6 months should declare 6 months of income, not 12. Note this clearly in the application and attach a statement from the local Panchayat if possible.",
+      "source": "Tamil Nadu Social Welfare Department, Agricultural Income FAQ, 2023",
+      "confidence_base": 0.8,
+      "language": "en",
+      "tags": [
+        "income",
+        "agriculture",
+        "seasonal"
+      ]
+    },
+    {
+      "rule_id": "PENSION_043",
+      "category": "process",
+      "text": "FORM 1-W is available free of charge at: (1) Block Development Office, (2) Taluk Office, (3) Village Panchayat office, (4) Online at socialwelfare.tn.gov.in. Do NOT pay anyone for a copy of the form — it is always free.",
+      "source": "Tamil Nadu Social Welfare Department, 2024",
+      "confidence_base": 0.96,
+      "language": "en",
+      "tags": [
+        "process",
+        "form",
+        "download",
+        "free"
+      ]
+    },
+    {
+      "rule_id": "PENSION_044",
+      "category": "contact",
+      "text": "Online portal for application tracking and submission: socialwelfare.tn.gov.in. Grievance portal: pgportal.gov.in. Both portals are free and available 24/7. Community workers can assist with registration.",
+      "source": "Tamil Nadu e-Governance Agency (TNeGA), 2024",
+      "confidence_base": 0.83,
+      "language": "en",
+      "tags": [
+        "contact",
+        "online",
+        "portal",
+        "grievance"
+      ]
+    },
+    {
+      "rule_id": "PENSION_045",
+      "category": "process",
+      "text": "Village Panchayat's role: The local Panchayat President or Secretary can certify income, residence, and widow status. This certification is often accepted in place of some formal documents for informal sector workers.",
+      "source": "Tamil Nadu Panchayat Raj Department, Community Certification Policy, 2023",
+      "confidence_base": 0.82,
+      "language": "en",
+      "tags": [
+        "process",
+        "panchayat",
+        "certification",
+        "informal"
+      ]
+    },
+    {
+      "rule_id": "PENSION_046",
+      "category": "language",
+      "text": "Tamil key terms: 'கணவர் இறப்பு சான்றிதழ்' = Husband's death certificate. 'வங்கி கணக்கு புத்தகம்' = Bank passbook. 'ரேஷன் கார்டு' = Ration card. 'பாஸ்போர்ட் புகைப்படம்' = Passport-size photo. 'தகுதி' = Eligibility.",
+      "source": "Tamil Nadu Social Welfare Department, Tamil Field Worker Glossary, 2024",
+      "confidence_base": 0.97,
+      "language": "ta",
+      "tags": [
+        "language",
+        "tamil",
+        "glossary",
+        "documents"
+      ]
+    },
+    {
+      "rule_id": "PENSION_047",
+      "category": "language",
+      "text": "Tamil process terms: 'விண்ணப்பிக்கவும்' = Please apply. 'சமர்பிக்கவும்' = Please submit. 'ஒப்புகை ரசீது' = Acknowledgment receipt. 'மனு நிலை' = Application status. 'நிராகரிப்பு' = Rejection. 'ஆர்வலம்' = Appeal.",
+      "source": "Tamil Nadu Social Welfare Department, Tamil Field Worker Glossary, 2024",
+      "confidence_base": 0.95,
+      "language": "ta",
+      "tags": [
+        "language",
+        "tamil",
+        "glossary",
+        "process"
+      ]
+    },
+    {
+      "rule_id": "PENSION_048",
+      "category": "eligibility",
+      "text": "There is no minimum duration of marriage required. A woman widowed even after a short marriage is eligible, provided all other criteria (age, income, residence) are met.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "confidence_base": 0.88,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "marriage-duration",
+        "clarification"
+      ]
+    },
+    {
+      "rule_id": "PENSION_049",
+      "category": "income",
+      "text": "Income from renting out a room in the home must be declared. Rental income + employment income must be below ₹2.4 lakhs/year combined. If combined income is below this limit, the applicant still qualifies.",
+      "source": "Tamil Nadu Social Welfare Department, Income Declaration Guidelines, 2024",
+      "confidence_base": 0.85,
+      "language": "en",
+      "tags": [
+        "income",
+        "rental",
+        "combined"
+      ]
+    },
+    {
+      "rule_id": "OAP_001",
+      "category": "old_age_pension",
+      "text": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS): Eligibility — Indian citizen aged 60 years or above, living below the poverty line (BPL). No widow requirement. Provides ₹200/month (age 60–79) or ₹500/month (age 80+) from central government.",
+      "source": "Ministry of Rural Development, IGNOAPS Guidelines, 2024",
+      "confidence_base": 0.94,
+      "language": "en",
+      "tags": [
+        "old-age",
+        "IGNOAPS",
+        "eligibility",
+        "central-scheme"
+      ]
+    },
+    {
+      "rule_id": "OAP_002",
+      "category": "old_age_pension",
+      "text": "Tamil Nadu adds a state top-up to IGNOAPS: Total pension = ₹200 (central) + ₹800 (state top-up) = ₹1,000/month for age 60–79. For age 80+: ₹500 (central) + ₹500 (state) = ₹1,000/month. Same total as widow pension.",
+      "source": "Tamil Nadu Social Welfare Department, State Pension Top-Up Circular, 2024",
+      "confidence_base": 0.91,
+      "language": "en",
+      "tags": [
+        "old-age",
+        "IGNOAPS",
+        "benefits",
+        "top-up"
+      ]
+    },
+    {
+      "rule_id": "OAP_003",
+      "category": "old_age_pension",
+      "text": "IGNOAPS documents required: (1) Age proof (Aadhaar, Voter ID, or birth certificate), (2) BPL ration card or income certificate, (3) Bank passbook, (4) Photograph. Application form available at Block Development Office — same office as widow pension.",
+      "source": "Ministry of Rural Development, IGNOAPS Application Guide, 2024",
+      "confidence_base": 0.9,
+      "language": "en",
+      "tags": [
+        "old-age",
+        "IGNOAPS",
+        "documents"
+      ]
+    },
+    {
+      "rule_id": "OAP_004",
+      "category": "old_age_pension",
+      "text": "A widow aged 60+ can receive EITHER the widow pension OR the old-age pension — but NOT both simultaneously. Widow pension (₹1,000) and IGNOAPS (₹1,000) pay the same amount. Choose the one she qualifies for most easily. Consult BDO to decide.",
+      "source": "Tamil Nadu Social Welfare Department, Scheme Overlap Policy, 2024",
+      "confidence_base": 0.87,
+      "language": "en",
+      "tags": [
+        "old-age",
+        "widow",
+        "overlap",
+        "important"
+      ]
+    },
+    {
+      "rule_id": "OAP_005",
+      "category": "old_age_pension",
+      "text": "Indira Gandhi National Widow Benefit Scheme (IGNWBS): A separate central scheme for widows aged 40–64, BPL households. Provides a one-time grant of ₹20,000 (not monthly pension). Tamil Nadu also administers this through Block Development Offices.",
+      "source": "Ministry of Rural Development, IGNWBS Guidelines, 2024",
+      "confidence_base": 0.83,
+      "language": "en",
+      "tags": [
+        "widow",
+        "IGNWBS",
+        "one-time-grant",
+        "central-scheme"
+      ]
+    },
+    {
+      "rule_id": "DISAB_001",
+      "category": "disability_pension",
+      "text": "Indira Gandhi National Disability Pension Scheme (IGNDPS): Eligibility — aged 18–79, disability of 80% or more (severe/multiple disability), living below poverty line (BPL). Provides ₹300/month central + Tamil Nadu top-up = ₹1,000/month.",
+      "source": "Ministry of Rural Development, IGNDPS Guidelines, 2024",
+      "confidence_base": 0.91,
+      "language": "en",
+      "tags": [
+        "disability",
+        "IGNDPS",
+        "eligibility"
+      ]
+    },
+    {
+      "rule_id": "DISAB_002",
+      "category": "disability_pension",
+      "text": "Disability certificate required for disability pension: Issued by a government-recognized medical board. Apply at the nearest government hospital or District Disability Rehabilitation Centre (DDRC). Certificate is valid for life for permanent disabilities.",
+      "source": "Ministry of Social Justice, Disability Certificate Guidelines, 2024",
+      "confidence_base": 0.88,
+      "language": "en",
+      "tags": [
+        "disability",
+        "certificate",
+        "process"
+      ]
+    },
+    {
+      "rule_id": "DISAB_003",
+      "category": "disability_pension",
+      "text": "A widow with a disability can receive the widow pension AND apply for the disability supplement (extra ₹500/month) — these are not considered 'double pension' since one is a main scheme and the other is a supplement. Total possible: ₹1,500/month.",
+      "source": "Tamil Nadu Social Welfare Department, Combined Benefits Circular, 2024",
+      "confidence_base": 0.79,
+      "language": "en",
+      "tags": [
+        "disability",
+        "widow",
+        "supplement",
+        "combined"
+      ]
+    },
+    {
+      "rule_id": "SCHEME_001",
+      "category": "schemes_overview",
+      "text": "Tamil Nadu's 4 main welfare pensions through Block Development Office: (1) Widow Pension — ₹1,000/month for widows 18–65, (2) Old Age Pension (IGNOAPS) — ₹1,000/month for age 60+, (3) Disability Pension (IGNDPS) — ₹1,000/month for 80%+ disability, (4) Destitute Widow — ₹1,500/month for eligible destitute cases.",
+      "source": "Tamil Nadu Social Welfare Department, Consolidated Scheme Summary, 2024",
+      "confidence_base": 0.9,
+      "language": "en",
+      "tags": [
+        "overview",
+        "schemes",
+        "summary"
+      ]
+    },
+    {
+      "rule_id": "SCHEME_002",
+      "category": "schemes_overview",
+      "text": "Destitute Widow Pension: For widows with no income source, no children or family support, and no property. Provides ₹1,500/month — higher rate than regular widow pension. Must be certified as destitute by the local Panchayat and Block Development Officer.",
+      "source": "Tamil Nadu Social Welfare Department, Destitute Widow Scheme Guidelines, 2024",
+      "confidence_base": 0.82,
+      "language": "en",
+      "tags": [
+        "destitute",
+        "widow",
+        "enhanced",
+        "eligibility"
+      ]
+    },
+    {
+      "rule_id": "SCHEME_003",
+      "category": "schemes_overview",
+      "text": "PM Matru Vandana Yojana (PMMVY): Maternity benefit scheme — ₹5,000 for first live birth for pregnant/lactating women. Not a pension scheme, but available through the same Block Development Office. Widows with young children may qualify.",
+      "source": "Ministry of Women and Child Development, PMMVY Guidelines, 2024",
+      "confidence_base": 0.8,
+      "language": "en",
+      "tags": [
+        "maternity",
+        "PMMVY",
+        "child",
+        "other-scheme"
+      ]
+    },
+    {
+      "rule_id": "PENSION_050",
+      "category": "process",
+      "text": "Common name mismatches on documents: If Aadhaar name differs from ration card or death certificate, file a 'name correction' affidavit at the local Notary (cost: ₹50–100). This resolves most mismatch issues without needing to reapply for documents.",
+      "source": "Tamil Nadu Social Welfare Department, Document Mismatch Resolution Guide, 2023",
+      "confidence_base": 0.84,
+      "language": "en",
+      "tags": [
+        "documents",
+        "name-mismatch",
+        "affidavit"
+      ]
+    },
+    {
+      "rule_id": "PENSION_051",
+      "category": "process",
+      "text": "Photograph requirements: Passport-size photo (3.5cm × 4.5cm), recent (within 6 months), white or light-coloured background. 2 copies required. Available at any photo studio for ₹20–50. If applicant cannot travel, community worker can take a digital photo.",
+      "source": "Tamil Nadu Social Welfare Department, FORM 1-W Photo Guidelines, 2024",
+      "confidence_base": 0.92,
+      "language": "en",
+      "tags": [
+        "documents",
+        "photo",
+        "requirements"
+      ]
+    },
+    {
+      "rule_id": "PENSION_052",
+      "category": "process",
+      "text": "If the applicant is illiterate: The community worker or Block Development Officer can assist in filling FORM 1-W. The applicant must sign or affix a thumb impression (angootha chhap) in the presence of two witnesses. This is legally valid.",
+      "source": "Tamil Nadu Social Welfare Department, Application Assistance Policy, 2024",
+      "confidence_base": 0.91,
+      "language": "en",
+      "tags": [
+        "process",
+        "illiterate",
+        "thumb-impression",
+        "assistance"
+      ]
+    },
+    {
+      "rule_id": "PENSION_053",
+      "category": "income",
+      "text": "If the applicant has no income proof documents (common for informal sector workers): A self-declaration affidavit of income, certified by the local Panchayat President, is accepted as income proof. This costs nothing and is available at the Panchayat office.",
+      "source": "Tamil Nadu Social Welfare Department, Income Proof Alternatives, 2023",
+      "confidence_base": 0.83,
+      "language": "en",
+      "tags": [
+        "income",
+        "no-proof",
+        "affidavit",
+        "panchayat"
+      ]
+    },
+    {
+      "rule_id": "PENSION_054",
+      "category": "eligibility",
+      "text": "Second marriage after widowhood: If a widow remarried but is now widowed again (second husband also deceased), she is eligible for widow pension based on her current widow status. Previous remarriage history does not permanently disqualify her.",
+      "source": "Tamil Nadu Social Welfare Department, Eligibility Clarification Circular, 2023",
+      "confidence_base": 0.78,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "remarriage",
+        "second-widow",
+        "clarification"
+      ]
+    },
+    {
+      "rule_id": "PENSION_055",
+      "category": "deadline",
+      "text": "Special Camps: Tamil Nadu Social Welfare Department conducts quarterly 'Special Application Camps' at Village Panchayat offices. During these camps, applications are accepted even outside the June 30 deadline window. Ask the local Panchayat President for the next camp date.",
+      "source": "Tamil Nadu Social Welfare Department, Special Camp Circular, 2024",
+      "confidence_base": 0.75,
+      "language": "en",
+      "tags": [
+        "deadline",
+        "special-camp",
+        "exception"
+      ]
+    },
+    {
+      "rule_id": "PENSION_056",
+      "category": "documents",
+      "text": "Aadhaar address update: If Aadhaar shows a different address than current residence, update it at any Aadhaar Seva Kendra with proof of current address (utility bill, ration card, or bank statement). Updated Aadhaar is issued within 30 days.",
+      "source": "UIDAI, Address Update Guidelines, 2024",
+      "confidence_base": 0.87,
+      "language": "en",
+      "tags": [
+        "documents",
+        "aadhaar",
+        "address-update"
+      ]
+    },
+    {
+      "rule_id": "PENSION_057",
+      "category": "language",
+      "text": "Tamil eligibility summary: 'கணவர் இறந்த பெண்' (widow), வயது 18–65, ஆண்டு வருமானம் ₹2.4 லட்சத்திற்கும் குறைவாக இருக்க வேண்டும், தமிழ்நாட்டில் நிரந்தர வாசம் இருக்க வேண்டும். மறுமணம் செய்தவர்கள் தகுதியற்றவர்கள்.",
+      "source": "Tamil Nadu Social Welfare Department, Tamil Summary Sheet, 2024",
+      "confidence_base": 0.95,
+      "language": "ta",
+      "tags": [
+        "language",
+        "tamil",
+        "eligibility-summary"
+      ]
+    },
+    {
+      "rule_id": "PENSION_058",
+      "category": "language",
+      "text": "Tamil benefits summary: ஒவ்வொரு மாதமும் ₹1,000 நேரடியாக வங்கி கணக்கில் வரவு வைக்கப்படும். மூன்று மாதத்திற்கு ஒருமுறை DBT மூலம் பணம் வழங்கப்படும். ஆண்டுதோறும் ஒக்டோபரில் 'உயிர் சான்றிதழ்' சமர்பிக்க வேண்டும்.",
+      "source": "Tamil Nadu Social Welfare Department, Tamil Summary Sheet, 2024",
+      "confidence_base": 0.93,
+      "language": "ta",
+      "tags": [
+        "language",
+        "tamil",
+        "benefits-summary"
+      ]
+    },
+    {
+      "rule_id": "PENSION_059",
+      "category": "contact",
+      "text": "Nearest Block Development Office (BDO) finder: Visit www.tn.gov.in or call Collector's Office helpline (available in every district). BDO offices are open Mon–Fri, 9 AM–5 PM. Bring the acknowledgment number for any follow-up visits.",
+      "source": "Tamil Nadu Government Portal, 2024",
+      "confidence_base": 0.85,
+      "language": "en",
+      "tags": [
+        "contact",
+        "BDO",
+        "location",
+        "office-hours"
+      ]
+    },
+    {
+      "rule_id": "PENSION_060",
+      "category": "eligibility",
+      "text": "Live-in relationship: If the applicant's partner passed away but they were not legally married, the widow pension does NOT apply. A legal marriage certificate or proof of registration is required to establish widow status.",
+      "source": "Tamil Nadu Social Welfare Department, Eligibility Clarification, 2023",
+      "confidence_base": 0.86,
+      "language": "en",
+      "tags": [
+        "eligibility",
+        "live-in",
+        "legal-marriage",
+        "clarification"
+      ]
+    },
+    {
+      "rule_id": "GOV_0072",
+      "text": "Applicant must be 60 years or above at time of application",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0073",
+      "text": "Must be a resident of Tamil Nadu for at least 3 years continuously",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0074",
+      "text": "Annual income should not exceed Rs. 2,000 for solo applicant",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "income",
+      "confidence_base": 0.92,
+      "tags": [
+        "income",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0075",
+      "text": "Couple applicants: combined annual income not exceeding Rs. 4,000",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "income",
+      "confidence_base": 0.92,
+      "tags": [
+        "income",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0076",
+      "text": "Applicant should not have been employed in government or quasi-government sector",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0077",
+      "text": "Should not be receiving any other pension from any source",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0078",
+      "text": "Age proof: Birth certificate, School leaving certificate, or Aadhaar card (any one)",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0079",
+      "text": "Residency proof: Ration card, Voter ID, Electricity bill (not older than 3 months)",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0080",
+      "text": "Income certificate: Issued by Village Officer or Gram Panchayat",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0081",
+      "text": "Bank account passbook: First page showing account holder name and account number",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0082",
+      "text": "Recent photograph: 4x6 cm size, recent passport-style photo",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0083",
+      "text": "Application form: OAP-1 (available at Village Administrative Office)",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0084",
+      "text": "Monthly pension amount is Rs. 1,000 as of 2024.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "benefits",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0085",
+      "text": "Payment is made directly to the applicant bank account on the 1st of every month.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0086",
+      "text": "The pension is lifelong as long as eligibility is maintained.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "benefits",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0087",
+      "text": "Visit the Village Administrative Officer office or Gram Panchayat to request form OAP-1.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0088",
+      "text": "Fill the form with legible handwriting and attach all required documents with originals for verification.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0089",
+      "text": "Submit at the office counter and receive a receipt with your application number.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0090",
+      "text": "A Village Officer will conduct a home verification within 7 to 10 days.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0091",
+      "text": "The application is then forwarded to the Taluk or Block office for approval within 14 to 21 days.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0092",
+      "text": "Approval notification is sent via SMS or mail.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0093",
+      "text": "The first pension payment arrives in the bank account 30 to 45 days after the application date.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0094",
+      "text": "Age: 50 years or above at time of application",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0095",
+      "text": "At least 1 year must have passed since husband death",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0096",
+      "text": "Applicant should not have remarried after husband death",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0097",
+      "text": "Widow age proof: Birth certificate, Aadhaar card, or School certificate",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0098",
+      "text": "Husband death certificate: Original certified copy from municipality or Gram Panchayat",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0099",
+      "text": "Widow residency proof: Ration card, Voter ID, or Electricity bill within 3 months",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0100",
+      "text": "Bank account passbook: showing account number and IFSC code",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0101",
+      "text": "If Aadhaar is not available, Voter ID, PAN, Passport, or Ration Card are acceptable alternatives.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0102",
+      "text": "If the death certificate is not available, it can be obtained from the municipal corporation or Gram Panchayat using an FIR and witness affidavits.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0103",
+      "text": "If income certificate is pending, a self-declaration affidavit is valid for 1 year.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0104",
+      "text": "If a bank account is not available, the applicant can open a free account at any bank using Aadhaar and address proof.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0105",
+      "text": "Monthly pension amount is Rs. 1,000 to Rs. 1,500 depending on state guidelines.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "benefits",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0106",
+      "text": "Widows aged 70 years or above receive an additional Rs. 500 per month.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "benefits",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0107",
+      "text": "Widows with a certified disability of 80 percent or more receive an additional Rs. 500 per month.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "benefits",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0108",
+      "text": "The pension stops immediately if the widow remarries.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0109",
+      "text": "The pension terminates upon the death of the widow and is not transferable to heirs.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0110",
+      "text": "The pension is suspended if the income exceeds the limit.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "income",
+      "confidence_base": 0.92,
+      "tags": [
+        "income",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0111",
+      "text": "Permanent relocation outside Tamil Nadu stops the pension.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0112",
+      "text": "If rejected, the applicant receives a written reason for rejection within the rejection letter.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "escalation",
+      "confidence_base": 0.92,
+      "tags": [
+        "escalation",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0113",
+      "text": "The appeal window is within 30 days of the rejection letter.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0114",
+      "text": "File the appeal with the District Social Welfare Officer.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "escalation",
+      "confidence_base": 0.92,
+      "tags": [
+        "escalation",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0115",
+      "text": "Attach additional evidence that addresses the rejection reason.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0116",
+      "text": "Appeal processing takes 15 to 30 days for a decision.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0117",
+      "text": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS) provides a monthly pension of Rs. 500 to Rs. 1,000 to Below Poverty Line seniors aged 60 or above.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "benefits",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0118",
+      "text": "Indira Gandhi National Widow Pension Scheme (IGNWPS) provides Rs. 300 to Rs. 500 per month to BPL widows aged 40 to 59.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "benefits",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0119",
+      "text": "At age 60, IGNWPS beneficiaries automatically transfer to the Old Age Pension scheme.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "contact",
+      "confidence_base": 0.92,
+      "tags": [
+        "contact",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0120",
+      "text": "Indira Gandhi National Disability Pension Scheme (IGNDPS) provides Rs. 500 to Rs. 1,000 per month to citizens aged 18 to 64 with a certified disability of minimum 80 percent.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "benefits",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0121",
+      "text": "At age 65, IGNDPS beneficiaries transfer to Old Age Pension.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0122",
+      "text": "All NSAP applications are completely free with no charges or fees.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0123",
+      "text": "No agents, middlemen, or brokers are needed as all services are free at the government office.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0124",
+      "text": "No discrimination is permitted based on religion, caste, gender, or community.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "eligibility",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0125",
+      "text": "Processing usually takes 30 to 60 days from complete application submission.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0126",
+      "text": "Aadhaar is a 12-digit unique identity number issued by UIDAI (Unique Identification Authority of India) completely free of charge.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0127",
+      "text": "Aadhaar can be obtained at any age from infancy to old age by visiting a Common Service Center.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0128",
+      "text": "Aadhaar enrollment takes 3 to 5 days and requires only one identity document from the acceptable list.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0129",
+      "text": "Acceptable identity proofs for Aadhaar include Voter ID, Driving License, PAN, Passport, Ration Card, and School leaving certificate.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0130",
+      "text": "Tamil Nadu accepts alternative IDs in place of Aadhaar if the applicant does not have one.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0131",
+      "text": "For pension applications, Voter ID is the most widely accepted alternative to Aadhaar.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0132",
+      "text": "A PAN card issued by the Income Tax Department is also an acceptable alternative identity document.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "income",
+      "confidence_base": 0.92,
+      "tags": [
+        "income",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0133",
+      "text": "If a death certificate is not available, visit the municipal corporation death registration office in urban areas or the Gram Panchayat in rural areas.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0134",
+      "text": "To get a death certificate, bring any 2 witness affidavits from neighbors and any medical certificate if the death occurred in a hospital.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0135",
+      "text": "Death certificates are usually processed within 7 to 14 days for minimal or no cost.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0136",
+      "text": "If age proof is not available, visit the Village Administrative Officer with any identity document to obtain a free age certificate.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0137",
+      "text": "An income certificate can be replaced by a notarized self-declaration affidavit stating annual income, which is valid for 1 year from the notarization date.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0138",
+      "text": "Income certificates can be obtained from the Gram Panchayat or Village Officer within 3 to 7 days for free.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0139",
+      "text": "A bank account can be opened at any nationalized bank for free using Aadhaar or alternative ID under the Pradhan Mantri Jan Dhan Yojana scheme.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0140",
+      "text": "Jan Dhan accounts have zero minimum balance, no monthly charges, and a free ATM card.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0141",
+      "text": "After opening a Jan Dhan account, link it to your pension application so payments go directly to your account.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "benefits",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0142",
+      "text": "Using an income certificate older than 3 months may cause the application to be rejected.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "documents",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0143",
+      "text": "Submitting photocopies without bringing original documents for verification is a common mistake that delays applications.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0144",
+      "text": "Not getting the Village Officer to sign and verify the form before submission causes the Block office to return it.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0145",
+      "text": "Losing the acknowledgment receipt after submission means you cannot track the application status.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0146",
+      "text": "Applying at the District office directly instead of the Village or Block office first will result in rejection.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "escalation",
+      "confidence_base": 0.92,
+      "tags": [
+        "escalation",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0147",
+      "text": "Paying an agent or broker to handle the application is unnecessary because all government services are free.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "general",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0148",
+      "text": "Providing an incorrect bank account number or IFSC code causes pension payment failures.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "benefits",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0149",
+      "text": "Not following up after 30 days means the application may be delayed without you knowing.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0150",
+      "text": "After submission, keep the acknowledgment slip which contains the application number for all future inquiries.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "process",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0151",
+      "text": "Track the application status online at https://www.tnpension.tn.gov.in under the Track Application Status section.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "contact",
+      "confidence_base": 0.92,
+      "tags": [
+        "contact",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0152",
+      "text": "Call the toll-free helpline 1800-425-1700 with your application number to inquire about status.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "contact",
+      "confidence_base": 0.92,
+      "tags": [
+        "contact",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0153",
+      "text": "If payment does not arrive within 75 days, visit the Block office with your acknowledgment slip and file a written complaint.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0154",
+      "text": "Submit the complaint in writing and the officer has 7 days to respond.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "deadline",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0155",
+      "text": "If there is no response, escalate to the District Social Welfare Officer.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "escalation",
+      "confidence_base": 0.92,
+      "tags": [
+        "escalation",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0156",
+      "text": "If the appeal at District level is also rejected, raise a grievance at pgportal.gov.in.",
+      "source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "category": "escalation",
+      "confidence_base": 0.92,
+      "tags": [
+        "escalation",
+        "official",
+        "2024"
+      ]
+    },
+    {
+      "rule_id": "GOV_0157",
+      "category": "eligibility",
+      "text": "The Destitute Widow Pension Scheme (DWPS) is for widows aged 18 to 39 years. The Indira Gandhi National Widow Pension Scheme (IGNWPS) covers widows aged 40 to 59 years. Women aged 60 and above who are widows may apply under the Old Age Pension (IGNOAPS).",
+      "source": "Chennai District OAP Eligibility Portal, Tamil Nadu Revenue Dept (official), 2024",
+      "confidence_base": 0.95,
+      "tags": [
+        "eligibility",
+        "widow",
+        "age",
+        "DWPS",
+        "IGNWPS"
+      ]
+    },
+    {
+      "rule_id": "GOV_0158",
+      "category": "benefits",
+      "text": "The Destitute Widow Pension Scheme (DWPS) provides Rs.1,000 per month. The IGNWPS (widows aged 40 to 59) provides Rs.1,200 per month: Rs.900 from state funds and Rs.300 from the central government.",
+      "source": "Tamil Nadu Social Welfare Dept, Tamildot.com widow pension guide, 2024",
+      "confidence_base": 0.93,
+      "tags": [
+        "benefits",
+        "amount",
+        "widow",
+        "DWPS",
+        "IGNWPS"
+      ]
+    },
+    {
+      "rule_id": "GOV_0159",
+      "category": "eligibility",
+      "text": "For the Destitute Widow Pension Scheme (DWPS), fixed assets must not exceed Rs.50,000. The applicant must have no other source of income and must not have remarried. She must be a Tamil Nadu resident.",
+      "source": "Chennai District OAP Eligibility Portal, Tamil Nadu Revenue Dept, 2024",
+      "confidence_base": 0.94,
+      "tags": [
+        "eligibility",
+        "widow",
+        "assets",
+        "property",
+        "DWPS"
+      ]
+    },
+    {
+      "rule_id": "GOV_0160",
+      "category": "documents",
+      "text": "Documents required for widow pension (DWPS or IGNWPS): recent passport-size photo, Aadhaar card with consent form, ration card or smart card (address proof), husband's death certificate, widow certificate from Revenue Department, voter ID or PAN card, and bank passbook (first page).",
+      "source": "Chennai District OAP Eligibility Portal and Tamildot.com, Tamil Nadu Revenue Dept, 2024",
+      "confidence_base": 0.95,
+      "tags": [
+        "documents",
+        "widow",
+        "DWPS",
+        "IGNWPS"
+      ]
+    },
+    {
+      "rule_id": "GOV_0161",
+      "category": "eligibility",
+      "text": "The Deserted and Divorced Women Pension Scheme (DDWPS) is for women aged 30 to 59 who have been legally divorced or deserted for at least 5 years. A legal separation certificate or divorce decree is required. Fixed assets must be under Rs.50,000.",
+      "source": "Chennai District OAP Eligibility Portal, Tamil Nadu Revenue Dept, 2024",
+      "confidence_base": 0.93,
+      "tags": [
+        "eligibility",
+        "deserted",
+        "divorced",
+        "DDWPS"
+      ]
+    },
+    {
+      "rule_id": "GOV_0162",
+      "category": "documents",
+      "text": "Documents for Deserted or Divorced Women Pension (DDWPS): photo, Aadhaar, ration card, voter ID, bank passbook, and a divorce decree or deserted women certificate issued by the Revenue Department.",
+      "source": "Chennai District OAP Eligibility Portal, Tamil Nadu Revenue Dept, 2024",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "deserted",
+        "divorced",
+        "DDWPS"
+      ]
+    },
+    {
+      "rule_id": "GOV_0163",
+      "category": "eligibility",
+      "text": "The Unmarried Women Pension Scheme (UWPS) is for women who have never married, aged 50 to 59 years, with no source of income and fixed assets under Rs.50,000. An unmarried status certificate from the Revenue Department is required.",
+      "source": "Chennai District OAP Eligibility Portal, Tamil Nadu Revenue Dept, 2024",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "unmarried",
+        "UWPS"
+      ]
+    },
+    {
+      "rule_id": "GOV_0164",
+      "category": "eligibility",
+      "text": "The Indira Gandhi National Old Age Pension Scheme (IGNOAPS) covers citizens aged 60 and above who are destitute, below the poverty line, and incapacitated to earn. Assets must be under Rs.50,000.",
+      "source": "Pudukkottai District Social Security Schemes, Tamil Nadu Govt NIC, 2024",
+      "confidence_base": 0.96,
+      "tags": [
+        "eligibility",
+        "old_age",
+        "IGNOAPS",
+        "BPL"
+      ]
+    },
+    {
+      "rule_id": "GOV_0165",
+      "category": "benefits",
+      "text": "The Indira Gandhi National Old Age Pension (IGNOAPS) pays Rs.1,000 per month. The Chief Minister Uzhavar Pathukappu Thittam (CMUPT) Old Age Pension for agricultural labourers aged 60 and above also pays Rs.1,000 per month.",
+      "source": "Pudukkottai District Social Security Schemes, Tamil Nadu Govt NIC, 2024",
+      "confidence_base": 0.95,
+      "tags": [
+        "benefits",
+        "old_age",
+        "IGNOAPS",
+        "CMUPT"
+      ]
+    },
+    {
+      "rule_id": "GOV_0166",
+      "category": "documents",
+      "text": "Documents for Old Age Pension (IGNOAPS): passport-size photo, BPL smart card or ration card, Aadhaar card, voter ID, bank passbook. For CMUPT pension, the CMUPT membership card is also required.",
+      "source": "Chennai District OAP Eligibility Portal, Tamil Nadu Revenue Dept, 2024",
+      "confidence_base": 0.94,
+      "tags": [
+        "documents",
+        "old_age",
+        "IGNOAPS",
+        "CMUPT"
+      ]
+    },
+    {
+      "rule_id": "GOV_0167",
+      "category": "eligibility",
+      "text": "The Indira Gandhi National Disability Pension Scheme (IGNDPS) requires 80% or more disability, BPL status, and annual income under Rs.3 lakhs. The Destitute Differently Abled Pension Scheme (DAPS) requires 40% or more disability with annual income under Rs.3 lakhs. Both are for applicants aged 18 and above.",
+      "source": "Chennai District OAP Eligibility Portal, Tamil Nadu Revenue Dept, 2024",
+      "confidence_base": 0.95,
+      "tags": [
+        "eligibility",
+        "disability",
+        "IGNDPS",
+        "DAPS"
+      ]
+    },
+    {
+      "rule_id": "GOV_0168",
+      "category": "benefits",
+      "text": "Disability pension (IGNDPS and DAPS) pays Rs.1,000 per month. Separate maintenance allowances for intellectual disability, muscular dystrophy, and leprosy (40 percent or more disability) pay Rs.1,500 to Rs.2,000 per month depending on the district.",
+      "source": "Tirunelveli and Kancheepuram District Differently Abled Welfare Offices, Tamil Nadu Govt, 2024",
+      "confidence_base": 0.91,
+      "tags": [
+        "benefits",
+        "disability",
+        "IGNDPS",
+        "DAPS",
+        "intellectual"
+      ]
+    },
+    {
+      "rule_id": "GOV_0169",
+      "category": "documents",
+      "text": "Documents for disability pension (IGNDPS or DAPS): passport-size photo, Aadhaar, ration card or smart card, voter ID, bank passbook, and a UDID card (Unique Disability ID) or disability certificate from a government doctor. A village officer certificate confirming no prior disability benefit may also be needed.",
+      "source": "Chennai District OAP Eligibility Portal and Kancheepuram Differently Abled Welfare Office, 2024",
+      "confidence_base": 0.94,
+      "tags": [
+        "documents",
+        "disability",
+        "IGNDPS",
+        "DAPS",
+        "UDID"
+      ]
+    },
+    {
+      "rule_id": "GOV_0170",
+      "category": "process",
+      "text": "To get a UDID (Unique Disability ID) card, apply at the district government hospital. The medical board assessment is free. The UDID card is accepted as proof for all disability welfare schemes in Tamil Nadu.",
+      "source": "Tamil Nadu Differently Abled Welfare Dept, 2024",
+      "confidence_base": 0.9,
+      "tags": [
+        "process",
+        "disability",
+        "UDID",
+        "documents"
+      ]
+    },
+    {
+      "rule_id": "GOV_0171",
+      "category": "process",
+      "text": "All Tamil Nadu social security pension schemes can be applied for online via the TN eSevai portal. Steps: register to get a Citizen Access Number (CAN); select Revenue Department and the relevant pension scheme; fill in bank details, income and property information; upload supporting documents; pay the nominal fee of approximately Rs.60; submit and keep the reference number to track status.",
+      "source": "Tamil Nadu eSevai Portal and Tamildot.com, 2024",
+      "confidence_base": 0.93,
+      "tags": [
+        "process",
+        "online",
+        "eSevai",
+        "application"
+      ]
+    },
+    {
+      "rule_id": "GOV_0172",
+      "category": "process",
+      "text": "Applications can also be submitted offline by visiting the local Tahsildar office or Special Tahsildar (Social Security Scheme) at the nearest taluk office. Verification is done by Revenue Department officials and approval is given by the Special Tahsildar.",
+      "source": "CRA Tamil Nadu and Tamildot.com, 2024",
+      "confidence_base": 0.93,
+      "tags": [
+        "process",
+        "offline",
+        "taluk",
+        "application"
+      ]
+    },
+    {
+      "rule_id": "GOV_0173",
+      "category": "process",
+      "text": "The e-Sevai centre (Common Service Centre or CSC) can assist citizens who are unfamiliar with the online process. Staff can help fill the form, scan documents, and submit the application on behalf of the applicant.",
+      "source": "Tamil Nadu eSevai Portal, 2024",
+      "confidence_base": 0.9,
+      "tags": [
+        "process",
+        "eSevai",
+        "CSC",
+        "assistance"
+      ]
+    },
+    {
+      "rule_id": "GOV_0174",
+      "category": "benefits",
+      "text": "Tamil Nadu Family Distress Relief Scheme pays Rs.20,000 when the family breadwinner dies and the nuclear family's annual income was Rs.48,000 or less. For accidental death of an agricultural labourer, small or marginal farmer, or village artisan, Rs.20,000 is paid and requires an FIR and post-mortem certificate.",
+      "source": "Pudukkottai District Social Security Schemes, Tamil Nadu Govt NIC, 2024",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "family_distress",
+        "accident",
+        "relief"
+      ]
+    },
+    {
+      "rule_id": "GOV_0175",
+      "category": "schemes_overview",
+      "text": "Tamil Nadu social security pension schemes summary by age: DWPS for widows aged 18 to 39; IGNWPS for widows aged 40 to 59; IGNOAPS for all destitute citizens aged 60 and above; DAPS for those with 40 percent or more disability aged 18 and above; IGNDPS for 80 percent or more disability; DDWPS for deserted or divorced women aged 30 to 59; UWPS for unmarried women aged 50 to 59. All pay Rs.1,000 per month unless stated otherwise.",
+      "source": "Tamil Nadu Revenue and Social Welfare Departments, multiple district NIC portals, 2024",
+      "confidence_base": 0.95,
+      "tags": [
+        "schemes_overview",
+        "summary",
+        "all_schemes"
+      ]
+    },
+    {
+      "rule_id": "GOV_0176",
+      "category": "eligibility",
+      "text": "A single applicant can receive only one social security pension at a time in Tamil Nadu. If circumstances change (for example, a DWPS widow turns 40), the scheme transitions from DWPS to IGNWPS through the same taluk office.",
+      "source": "Tamil Nadu Revenue Dept operational guidelines, 2024",
+      "confidence_base": 0.88,
+      "tags": [
+        "eligibility",
+        "one_pension",
+        "transition"
+      ]
+    },
+    {
+      "rule_id": "GOV_0177",
+      "category": "contact",
+      "text": "District Differently Abled Welfare Office, Tirunelveli: Phone 0462-2500157. Applications for disability maintenance allowances for intellectual disability, muscular dystrophy, and leprosy are submitted directly to this office.",
+      "source": "Tirunelveli District Differently Abled Welfare Office NIC, 2024",
+      "confidence_base": 0.91,
+      "tags": [
+        "contact",
+        "disability",
+        "tirunelveli"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_3408EC48",
+      "category": "eligibility",
+      "text": "To whom the benefit Destitute women/widows, deserted is due women, differently abled men and women, socially affected women and women from economically weaker sections.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.16",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_454E8E52",
+      "category": "income",
+      "text": "Income limit Annual income of the family should not exceed Rs.72,000.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.9",
+      "confidence_base": 0.92,
+      "tags": [
+        "income",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_DA3362FA",
+      "category": "eligibility",
+      "text": "Details of period within which application must be processed: 1 Month 7.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.49",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_414CEC1F",
+      "category": "eligibility",
+      "text": "Required relevant documents are Indira Gandhi National Old Age Pension Scheme(IGNOAPS)  Applicant Photo  Aadhaar Card  Aadhaar Consent Form  Smart Ration Card or Any address Proof  Self –declaration of Applicant  Any Identity Proof (Voter ID Card, Passport, PAN Card, Driving License)  Bank Passbook  BPL number Indira Gandhi National Disability Pension Scheme(IGNDAPS)  Applicant Photo  Aadhaar Card  Aadhaar Consent Form  Smart Ration Card or Any address Proof  Self –declaration of Applicant  Any Identity Proof (Voter ID Card, Passport, PAN Card, Driving License(Optional))  Bank Passbook  BPL number  Differently Abled ID card Indira Gandhi National Widow Pension Scheme(IGNWPS)  Applicant Photo  Aadhaar Card  Aadhaar Consent Form  Smart Ration Card or Any address Proof  Husband Death Certificate  Self –declaration of Applicant  Widow certificate  Any Identity Proof (Voter ID Card, Passport, PAN Card, Driving License)  Bank Passbook  BPL number Destitute Differently Abled Pension Scheme (DDAP)  Applicant Photo  Aadhaar Card  Aadhaar Consent Form  Smart Ration Card or Any address Proof  Self –declaration of Applicant",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.47",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_C2C895EF",
+      "category": "benefits",
+      "text": "To whom the benefit The women victims of domestic is intended violence 5.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.20",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_569F5A61",
+      "category": "process",
+      "text": "Details of authority of whom complaints would be filed: Special Deputy Collector(SSS) in District Collector's Office’s / Special Tahsildar (SSS) in Taluk Office’s",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.49",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_853973EF",
+      "category": "eligibility",
+      "text": "Other criteria Should have knowledge of tailoring.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.16",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_AF77E91E",
+      "category": "documents",
+      "text": "Time limit for Within 6 months from the date of submitting remarriage.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.7",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_106D6A43",
+      "category": "documents",
+      "text": "(DDWP)  Applicant Photo  Aadhaar Card  Aadhaar Consent Form  Smart Ration Card or Any address Proof  Court order copy  Self –declaration of Applicant  Any Identity Proof (Voter ID Card, Passport, PAN Card, Driving License)  Bank Passbook  Not remarried certificate  Abandonment Certificate",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.48",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_679616B9",
+      "category": "benefits",
+      "text": "Quantum of Scheme-I: Assistance An amount of Rs.50,000 is deposited in the name of the girl childin the form of fixed deposit with the Tamil Nadu Power Finance and Infrastructure Development Corporation Limited for 18 years for a family with one girl child.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.1",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_D7F4409A",
+      "category": "deadline",
+      "text": "Probable time limit Within 15 days from the date of for processing receipt of application applications 9.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.7",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_B40DAE00",
+      "category": "benefits",
+      "text": "When the benefit is On completion of 18 years of age, the amount due deposited with accrued interest will be given to the girl child.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.1",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_DF3BD8C7",
+      "category": "process",
+      "text": "Authority to be approached: Special Deputy Collector(SSS) in District Collector's Office / Special Tahsildar(SSS) in Taluk Office 4.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.46",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_828DE92A",
+      "category": "benefits",
+      "text": "Quantum of Scheme-I Assistance Rs.25,000 through Electronic Clearing Serviceis provided alongwith 1 Sovereign (8gm) 22 carat gold coin for making Thirumangalyam.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.8",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_085EB045",
+      "category": "eligibility",
+      "text": "Objective of the Sewing machines are supplied at free of scheme cost with a view to increase the self employment potential for rehabilitation of destitute women/widows, deserted women, differently abled men and women, socially affected women and women from economically weaker sections.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.16",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_C1FFE994",
+      "category": "eligibility",
+      "text": " Any Identity Proof (Voter ID Card, Passport, PAN Card, Driving License(Optional))  Bank Passbook  Differently Abled ID card Destitute Widows Pension Scheme(DWP)  Applicant Photo  Aadhaar Card  Aadhaar Consent Form  Smart Ration Card or Any address Proof  Husband Death Certificate  Self –declaration of Applicant  Widow Certificate  Any Identity Proof (Voter ID Card, Passport, PAN Card, Driving License)  Bank Passbook Chief Minister's Uzhavar Padhukappu Thittam(CMUPT)  Applicant Photo  Aadhaar Card  Aadhaar Consent Form  Smart Ration Card or Any address Proof  CMUPT Card  Self –declaration of Applicant  Any Identity Proof (Voter ID Card, Passport, PAN Card, Driving License)  Bank Passbook Destitute / Deserted Wives Pension Scheme.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.48",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_AD161E0E",
+      "category": "income",
+      "text": "To whom the benefit Working Women with salary not more is due than Rs.25,000 per month in Chennai, Rs.15,000 per month in other districts.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.19",
+      "confidence_base": 0.92,
+      "tags": [
+        "income",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_4E16A74C",
+      "category": "deadline",
+      "text": "Either of the parents should have undergone sterilisation within 35 years of age.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.2",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_97F8D8C8",
+      "category": "eligibility",
+      "text": "Eligibility  Above 40 years  Should have Identity Card issued by the Tamil Nadu Transgender Welfare Board  Transgender who are physically unable to work and earn  Transgender who are not provided help by any of the family member or any other person 6.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.27",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_4960AA71",
+      "category": "eligibility",
+      "text": "Objective of the To provide institutional care to widows, Scheme destitute women, deserted women, adolescent girls and differently abled women and their children who are economically and socially backward by giving them protection, education and vocational training.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.17",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_75493747",
+      "category": "eligibility",
+      "text": "2.2.2 Dr.Dharmambal Ammaiyar Ninaivu Widow Remarriage Assistance Scheme 1.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.6",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_C9A3EE01",
+      "category": "process",
+      "text": "Assistance provided Accommodation, food, education and vocational training, free supply of text books, note books, uniforms, chapals and sanitary napkins.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.17",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_4B166635",
+      "category": "deadline",
+      "text": "Annual incentive of Rs.1,800 will be deposited in the Girl child’s bank account from the 6th year of the fixed deposit.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.3",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_ABACE7DD",
+      "category": "documents",
+      "text": "Time limit for Application should be submitted 40 submitting days before the marriage date.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.9",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_382BA439",
+      "category": "deadline",
+      "text": "Assistance Rs.1000 per month per Transgender Provided (Through Revenue Department) 4.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.27",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_D74C22CA",
+      "category": "documents",
+      "text": "The formalities required for filling application: Application submitted through e-seva centres with the following relevant documents/ application",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.46",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_E0A5B2AF",
+      "category": "process",
+      "text": "Objectives of the Act To prevent violence in families and to provide a peaceful and secure physical and mental space wherein a woman would be in a position to take free and informed decisions.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.20",
+      "confidence_base": 0.92,
+      "tags": [
+        "process",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_9BB0B537",
+      "category": "appeal",
+      "text": "Basis of Admission of On a written complaint from the petitions victim 6.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.20",
+      "confidence_base": 0.92,
+      "tags": [
+        "appeal",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_39E2A8CE",
+      "category": "eligibility",
+      "text": "2.2.3 E.V.R Maniammaiyar Ninaivu Marriage Assistance Scheme for Daughter’s of Poor Widows Name of the Scheme 1.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.8",
+      "confidence_base": 0.92,
+      "tags": [
+        "eligibility",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_DA19CA02",
+      "category": "benefits",
+      "text": "To whom the Poor Destitute Transgender above 40 benefit is due years of age.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.27",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_2527D017",
+      "category": "documents",
+      "text": "Quantum of Scheme-I Assistance Rs.25,000 (Rs.15,000 through Electronic Clearing Service and Rs.10,000 as National Savings Certificate) is provided along with 1 Sovereign(8 gm) 22 carat gold coin for making Thirumangalyam.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.6",
+      "confidence_base": 0.92,
+      "tags": [
+        "documents",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_405B2606",
+      "category": "income",
+      "text": "Income limit Annual income not exceeding Rs.72,000 for Scheme–I and Scheme – II.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.2",
+      "confidence_base": 0.92,
+      "tags": [
+        "income",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_6557E9CD",
+      "category": "benefits",
+      "text": "Final Maturity The matured amount will be given to the girl child only if she appears for 10th standard public exam.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.3",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_0DD37F8F",
+      "category": "benefits",
+      "text": "Scheme-II Rs.50,000 through Electronic Clearing Service is provided alongwith 1 Sovereign (8gm) 22 carat gold coin for making Thirumangalyam.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.8",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_41BD8661",
+      "category": "income",
+      "text": "Income limit Not exceeding Rs.72,000 per annum.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.16",
+      "confidence_base": 0.92,
+      "tags": [
+        "income",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_0494AE27",
+      "category": "benefits",
+      "text": "2.4.2 Pension Scheme for Destitute Transgender 1.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.27",
+      "confidence_base": 0.92,
+      "tags": [
+        "benefits",
+        "pdf_extracted",
+        "official_government"
+      ]
+    },
+    {
+      "rule_id": "PDF_TNSW_ANN_339EF1D1",
+      "category": "deadline",
+      "text": "Nature of assistance: Social Security Schemes Monthly Rs.1000/- only National Family Benefit Scheme Rs.20000 One time only 3.",
+      "source": "tnsw_annexure_english.pdf — Tamil Nadu Social Welfare Dept (official), p.46",
+      "confidence_base": 0.92,
+      "tags": [
+        "deadline",
+        "pdf_extracted",
+        "official_government"
+      ]
+    }
+  ],
+  "metadata": {
+    "total_facts": 214,
+    "last_updated": "2026-05-18",
+    "sources": [
+      "Tamil Nadu Social Welfare Department, Official Guidelines 2024",
+      "Tamil Nadu Social Welfare Department, FORM 1-W Guidelines, 2024",
+      "UIDAI Aadhaar Guidelines, 2024",
+      "National Social Assistance Programme (NSAP) Guidelines"
+    ],
+    "sources_added": [
+      "Chennai District OAP Eligibility Portal (chennai.nic.in)",
+      "Pudukkottai District Social Security Schemes (pudukkottai.nic.in)",
+      "Tirunelveli District Differently Abled Welfare (tirunelveli.nic.in)",
+      "Kancheepuram Differently Abled Welfare (kancheepuram.nic.in)",
+      "Tamil Nadu eSevai Portal",
+      "Tamildot.com widow pension guide"
+    ]
+  }
+}

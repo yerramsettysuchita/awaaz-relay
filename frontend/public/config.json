@@ -1,0 +1,22 @@
+{
+  "facts_count": 156,
+  "schemes_count": 6,
+  "languages_count": 5,
+  "schemes_list": [
+    "Widow Pension (WPS)",
+    "Old Age Pension (OAP)",
+    "Disability Pension",
+    "Destitute Widow",
+    "IGNOAPS",
+    "IGNWBS"
+  ],
+  "languages_list": [
+    "Tamil",
+    "Telugu",
+    "Kannada",
+    "Hindi",
+    "English"
+  ],
+  "last_updated": "2026-05-18T19:58:42.915574",
+  "data_source": "Tamil Nadu Social Welfare Department, Official Guidelines 2024"
+}
