@@ -13,6 +13,7 @@ import os
 import sqlite3
 import logging
 import warnings
+import asyncio
 from typing import Optional
 from datetime import datetime, timedelta
 from contextlib import asynccontextmanager
@@ -96,6 +97,24 @@ _STATUS: dict = {
 }
 
 
+async def _keep_alive() -> None:
+    """Ping /health every 4 minutes to prevent Render free-tier spin-down."""
+    import httpx
+    self_url = os.getenv("RENDER_EXTERNAL_URL", "")
+    if not self_url:
+        return  # not running on Render — skip
+    url = f"{self_url}/health"
+    await asyncio.sleep(60)  # wait for server to finish startup
+    while True:
+        try:
+            async with httpx.AsyncClient(timeout=10) as client:
+                await client.get(url)
+            logger.info("[KEEPALIVE] ping ok")
+        except Exception as e:
+            logger.warning(f"[KEEPALIVE] ping failed: {e}")
+        await asyncio.sleep(240)  # 4 minutes
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Run startup checks before serving requests."""
@@ -123,7 +142,9 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.error(f"[STARTUP] Embeddings check failed: {e}")
 
+    task = asyncio.create_task(_keep_alive())
     yield  # server runs here
+    task.cancel()
 
 
 # ---------------------------------------------------------------------------
