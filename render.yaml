@@ -13,7 +13,7 @@ services:
       - key: DEMO_MODE
         value: "false"
       - key: CORS_ORIGINS
-        value: "https://awaaz-relay.vercel.app,https://awaaz-relay-git-master-yerramsettysuchita.vercel.app"
+        value: "https://awaaz-relay-m0tz3ff17-yerramsettysuchitas-projects.vercel.app,https://awaaz-relay.vercel.app"
     disk:
       name: awaaz-data
       mountPath: /app/data
