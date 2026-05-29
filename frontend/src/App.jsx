@@ -37,17 +37,26 @@ export default function App() {
   const stepTimers = useRef([]);
   const resultRef = useRef(null);
 
-  // Server health polling — check on mount and every 30 seconds
+  // Server health polling — retry with backoff so a cold-start shows "Starting up" not "offline"
   useEffect(() => {
+    let retries = 0;
     const checkHealth = () => {
-      fetch(`${API_BASE}/health`, { signal: AbortSignal.timeout(5000) })
+      fetch(`${API_BASE}/health`, { signal: AbortSignal.timeout(8000) })
         .then((r) => r.ok ? r.json() : null)
         .then((data) => {
-          if (!data) { setServerStatus("offline"); return; }
+          if (!data) {
+            retries++;
+            setServerStatus(retries <= 4 ? "starting" : "offline");
+            return;
+          }
+          retries = 0;
           setServerStatus(data.status === "ok" ? "ok" : "starting");
           if (data.kb_facts) setKbConfig((prev) => ({ ...prev, facts_count: data.kb_facts }));
         })
-        .catch(() => setServerStatus("offline"));
+        .catch(() => {
+          retries++;
+          setServerStatus(retries <= 4 ? "starting" : "offline");
+        });
     };
     checkHealth();
     const interval = setInterval(checkHealth, 30_000);

@@ -12,9 +12,7 @@ services:
         sync: false
       - key: DEMO_MODE
         value: "false"
+      - key: RENDER_EXTERNAL_URL
+        value: "https://awaaz-relay-api.onrender.com"
       - key: CORS_ORIGINS
         value: "https://awaaz-relay-m0tz3ff17-yerramsettysuchitas-projects.vercel.app,https://awaaz-relay.vercel.app"
-    disk:
-      name: awaaz-data
-      mountPath: /app/data
-      sizeGB: 1
