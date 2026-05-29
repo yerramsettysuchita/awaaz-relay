@@ -1093,3 +1093,129 @@ button:focus-visible, a:focus-visible, select:focus-visible, textarea:focus-visi
 
 /* ── Error boundary ────────────────────────────────────────────────────── */
 .error-boundary { padding: 1.5rem; border-left: 4px solid var(--red); background: var(--red-light); }
+
+/* ── Impact Stats ──────────────────────────────────────────────────────── */
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.impact-stat {
+  background: var(--olive-light);
+  border: 1px solid rgba(74,124,89,0.18);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 0.5rem;
+  text-align: center;
+}
+
+.impact-num {
+  display: block;
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--olive-dark);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.impact-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.2rem;
+}
+
+/* ── How It Works ──────────────────────────────────────────────────────── */
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: left;
+  margin: 1.25rem auto 1.5rem;
+  max-width: 480px;
+  width: 100%;
+}
+
+.hiw-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.75rem 0.9rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+
+.hiw-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  background: var(--olive);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  margin-top: 1px;
+}
+
+.hiw-step strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--olive-dark);
+  margin-bottom: 0.15rem;
+}
+
+.hiw-step p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ── Live Demo Button ──────────────────────────────────────────────────── */
+.panel-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.demo-run-btn {
+  padding: 0.42rem 1.1rem;
+  border: 1.5px solid var(--olive);
+  border-radius: 20px;
+  background: transparent;
+  color: var(--olive-dark);
+  font-family: var(--font);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: all 0.15s;
+}
+.demo-run-btn:hover:not(:disabled) {
+  background: var(--olive);
+  color: white;
+}
+.demo-run-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* dark mode for new elements */
+[data-theme="dark"] .impact-stat    { background: var(--olive-light); border-color: rgba(77,184,112,0.15); }
+[data-theme="dark"] .hiw-step       { background: var(--card-bg); border-color: var(--border); }
+[data-theme="dark"] .demo-run-btn   { border-color: var(--olive); color: var(--olive-dark); }
+[data-theme="dark"] .demo-run-btn:hover:not(:disabled) { background: var(--olive); color: #0f1612; }
+
+@media (max-width: 480px) {
+  .impact-stats { grid-template-columns: repeat(2, 1fr); }
+  .impact-num   { font-size: 1.25rem; }
+}

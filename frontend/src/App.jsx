@@ -385,18 +385,55 @@ export default function App() {
           {/* Empty state — live KB insights */}
           {!result && !loading && !error && (
             <div className="empty-state">
-              <div className="empty-icon">
-                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" style={{color:"var(--olive)"}}>
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
+              {/* Impact stats */}
+              <div className="impact-stats">
+                <div className="impact-stat">
+                  <span className="impact-num">10M+</span>
+                  <span className="impact-label">Eligible citizens</span>
+                </div>
+                <div className="impact-stat">
+                  <span className="impact-num">12</span>
+                  <span className="impact-label">Welfare schemes</span>
+                </div>
+                <div className="impact-stat">
+                  <span className="impact-num">214</span>
+                  <span className="impact-label">Verified facts</span>
+                </div>
+                <div className="impact-stat">
+                  <span className="impact-num">5</span>
+                  <span className="impact-label">Languages</span>
+                </div>
               </div>
+
               <h3 className="empty-title">Ready to help</h3>
               <p className="empty-text">
                 Submit a query on the left — type, upload a government form image, or speak in Tamil, Telugu, Kannada, Hindi, or English.
               </p>
+
+              {/* How it works */}
+              <div className="how-it-works">
+                <div className="hiw-step">
+                  <span className="hiw-num">1</span>
+                  <div>
+                    <strong>Ask in any language</strong>
+                    <p>Type, speak, or upload a government form photo</p>
+                  </div>
+                </div>
+                <div className="hiw-step">
+                  <span className="hiw-num">2</span>
+                  <div>
+                    <strong>AI searches 214 facts</strong>
+                    <p>Hybrid retrieval finds the most relevant official rules</p>
+                  </div>
+                </div>
+                <div className="hiw-step">
+                  <span className="hiw-num">3</span>
+                  <div>
+                    <strong>Dual output returned</strong>
+                    <p>Worker checklist + plain-language explanation for the citizen</p>
+                  </div>
+                </div>
+              </div>
 
               {/* Live scheme pills from config */}
               <div className="scheme-pills">

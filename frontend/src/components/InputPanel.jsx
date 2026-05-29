@@ -62,7 +62,22 @@ const TABS = [
   { id: "voice", label: "Voice",   Icon: IconMic },
 ];
 
+const DEMO_QUERY = {
+  lang: "en",
+  text: "I am a widow. My husband passed away 8 months ago. I earn ₹3,500 per month doing daily wage work. I don't have an Aadhaar card but I have a ration card. Do I qualify for the widow pension? What documents do I need and when is the last date to apply?",
+};
+
 export default function InputPanel({ onSubmit, loading }) {
+  const runDemo = () => {
+    setLanguage(DEMO_QUERY.lang);
+    setInputType("text");
+    setText(DEMO_QUERY.text);
+    const formData = new FormData();
+    formData.append("input_type", "text");
+    formData.append("language", DEMO_QUERY.lang);
+    formData.append("text", DEMO_QUERY.text);
+    onSubmit(formData);
+  };
   const [inputType, setInputType] = useState("text");
   const [language, setLanguage]   = useState("ta");
   const [text, setText]           = useState("");
@@ -364,7 +379,16 @@ export default function InputPanel({ onSubmit, loading }) {
       </form>
 
       <div className="panel-footer">
-        <span className="offline-badge">App loads offline · AI analysis needs internet</span>
+        <button
+          type="button"
+          className="demo-run-btn"
+          onClick={runDemo}
+          disabled={loading}
+          title="Auto-fill and submit a real widow pension query"
+        >
+          ▶ Run Live Demo
+        </button>
+        <span className="offline-badge">Grounded on 214 verified TN government facts</span>
       </div>
     </div>
   );
