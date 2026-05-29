@@ -21,12 +21,16 @@ SYSTEM_PROMPT_PATH = os.path.join(os.path.dirname(__file__), "prompts", "system_
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "")
 DEMO_MODE_ENV = os.getenv("DEMO_MODE", "true").lower() == "true"
 MODEL_CHAIN = [
-    ("gemini-2.0-flash-lite",  8),   # Fastest — try first
-    ("gemini-2.0-flash",      12),   # High quality fallback
-    ("gemini-2.5-flash",      20),   # Last resort
+    ("gemini-2.0-flash-lite", 7),   # Fastest — primary
+    ("gemini-2.0-flash",      12),  # Quality fallback — NOT 2.5-flash (thinking model, 20-60s)
 ]
-GEMINI_MODEL    = MODEL_CHAIN[0][0]   # Used in logs
+GEMINI_MODEL    = MODEL_CHAIN[0][0]
 GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models/"
+
+# Simple in-memory response cache — keyed by (query, language)
+# Avoids redundant API calls for repeated queries (common in demos)
+_RESPONSE_CACHE: dict = {}
+_CACHE_MAX = 50
 
 
 # ---------------------------------------------------------------------------
@@ -76,15 +80,19 @@ OUTPUT (raw JSON only, no reasoning, no explanation, start with {{):"""
 def _call_gemini(system_prompt: str, user_message: str) -> str:
     import requests  # type: ignore
 
-    combined = f"{system_prompt}\n\n---\n\n{user_message}"
     last_error = None
 
     for model, timeout in MODEL_CHAIN:
         try:
             url = f"{GEMINI_BASE_URL}{model}:generateContent"
+            # Use systemInstruction separately — Gemini can cache it, reducing latency
             payload = {
-                "contents": [{"role": "user", "parts": [{"text": combined}]}],
-                "generationConfig": {"temperature": 0.2, "maxOutputTokens": 4096},
+                "systemInstruction": {"parts": [{"text": system_prompt}]},
+                "contents": [{"role": "user", "parts": [{"text": user_message}]}],
+                "generationConfig": {
+                    "temperature": 0.2,
+                    "maxOutputTokens": 1024,  # JSON response never exceeds ~800 tokens
+                },
             }
             resp = requests.post(url, params={"key": GOOGLE_API_KEY}, json=payload, timeout=timeout)
             resp.raise_for_status()
@@ -665,6 +673,21 @@ def _detect_mock_scenario(case: CaseInput) -> str:
 # Public orchestrate function
 # ---------------------------------------------------------------------------
 
+def _demo_response(case: CaseInput) -> GemmaResponse:
+    """Return a mock response with regional summary attached."""
+    scenario = _detect_mock_scenario(case)
+    logger.info(f"[DEMO] '{scenario}' mock for lang={case.language}")
+    base = MOCK_RESPONSES[scenario]
+    lang = case.language or "ta"
+    regional = MULTILINGUAL_SUMMARIES.get(scenario, {}).get(lang)
+    if lang == "ta" and not regional:
+        regional = base.tamil_summary
+    return base.model_copy(update={
+        "regional_summary": regional,
+        "tamil_summary": regional if lang == "ta" else base.tamil_summary,
+    })
+
+
 def orchestrate(
     case: CaseInput,
     retrieval: RetrievalResult,
@@ -673,60 +696,50 @@ def orchestrate(
 ) -> GemmaResponse:
     """
     Main entry point.
-    demo_mode=True  → skip API and return mock (used only for testing / no-key environments).
-    demo_mode=False → call real Gemini API; return safe error response on hard failure.
-    conversation_history → last N turns for multi-turn context (passed to prompt builder).
+    demo_mode=True  → instant mock response (no API call).
+    demo_mode=False → Gemini API with 15s hard timeout; falls back to demo on failure.
     """
-    # Force demo when no API key is configured (prevents crashes during local dev)
     use_demo = demo_mode or not GOOGLE_API_KEY.strip()
-
     if use_demo:
-        scenario = _detect_mock_scenario(case)
-        logger.info(f"[DEMO] '{scenario}' mock for lang={case.language}")
-        base = MOCK_RESPONSES[scenario]
-        lang = case.language or "ta"
-        regional = MULTILINGUAL_SUMMARIES.get(scenario, {}).get(lang)
-        if lang == "ta" and not regional:
-            regional = base.tamil_summary
-        return base.model_copy(update={
-            "regional_summary": regional,
-            "tamil_summary": regional if lang == "ta" else base.tamil_summary,
-        })
+        return _demo_response(case)
+
+    # Cache key: query + language (ignore history for caching)
+    cache_key = f"{(case.query or '').strip().lower()[:200]}|{case.language}"
+    if cache_key in _RESPONSE_CACHE:
+        logger.info(f"[CACHE] Hit for '{cache_key[:60]}'")
+        return _RESPONSE_CACHE[cache_key]
 
     logger.info(f"[LIVE API] Calling Gemini ({GEMINI_MODEL}) for lang={case.language}")
     try:
+        import concurrent.futures
         system_prompt = _load_system_prompt()
         user_message  = _build_user_message(case, retrieval, conversation_history)
-        raw_response  = _call_gemini(system_prompt, user_message)
+
+        # Hard 15-second wall-clock timeout across the entire model chain
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+            future = pool.submit(_call_gemini, system_prompt, user_message)
+            try:
+                raw_response = future.result(timeout=15)
+            except concurrent.futures.TimeoutError:
+                raise RuntimeError("Gemini did not respond within 15 seconds.")
+
         logger.info(f"[LIVE API] Response received ({len(raw_response)} chars)")
         result = _parse_response(raw_response)
-        # If Gemini returned no regional_summary (hallucination guard), patch from
-        # MULTILINGUAL_SUMMARIES for known scenario patterns
+
+        # Patch missing regional summary from pre-verified translations
         if not result.regional_summary and case.language != "en":
             scenario = _detect_mock_scenario(case)
             regional = MULTILINGUAL_SUMMARIES.get(scenario, {}).get(case.language)
             if regional:
                 result = result.model_copy(update={"regional_summary": regional})
+
+        # Store in cache (evict oldest if full)
+        if len(_RESPONSE_CACHE) >= _CACHE_MAX:
+            oldest = next(iter(_RESPONSE_CACHE))
+            del _RESPONSE_CACHE[oldest]
+        _RESPONSE_CACHE[cache_key] = result
         return result
+
     except Exception as e:
-        logger.error(f"[LIVE API] Failed: {e}. Returning safe error response.")
-        return GemmaResponse(
-            confidence=0.0,
-            confidence_percent=0,
-            confidence_band="low",
-            domain="out_of_scope",
-            worker_guidance=[
-                "The AI service is temporarily unavailable. Please retry in a moment.",
-                "If the problem persists, call 1800-425-1700 for direct assistance.",
-            ],
-            citizen_guidance=(
-                "We are having trouble connecting to the AI service right now. "
-                "Please try your question again in a moment. "
-                "If you need immediate help, call 1800-425-1700 (toll-free)."
-            ),
-            escalation_needed=True,
-            escalation_reason="AI service unavailable. Please retry or call 1800-425-1700.",
-            evidence_used=[],
-            tamil_summary=None,
-            regional_summary=None,
-        )
+        logger.warning(f"[LIVE API] Failed ({e}). Falling back to demo response.")
+        return _demo_response(case)

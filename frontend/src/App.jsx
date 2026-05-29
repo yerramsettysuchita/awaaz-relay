@@ -17,9 +17,9 @@ const StepIcon = ({ d }) => (
 );
 
 const LOADING_STEPS = [
-  { id: "input",     label: "Processing input…",         iconD: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6 M12 18v-6 M9 15h6" },
-  { id: "retrieval", label: "Searching knowledge base…", iconD: "M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z M21 21l-4.35-4.35" },
-  { id: "ai",        label: "Generating AI response…",   iconD: "M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5" },
+  { id: "input",     label: "Processing input…",                    iconD: "M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z M14 2v6h6 M12 18v-6 M9 15h6" },
+  { id: "retrieval", label: "Searching 214 facts…",                 iconD: "M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16z M21 21l-4.35-4.35" },
+  { id: "ai",        label: "Gemini generating response (5-10s)…",  iconD: "M12 2L2 7l10 5 10-5-10-5z M2 17l10 5 10-5 M2 12l10 5 10-5" },
 ];
 
 export default function App() {
@@ -102,9 +102,9 @@ export default function App() {
       formData.append("conversation_context", JSON.stringify(conversationHistory));
     }
 
-    // Animate loading steps
-    stepTimers.current.push(setTimeout(() => setLoadStep(1), 300));
-    stepTimers.current.push(setTimeout(() => setLoadStep(2), 700));
+    // Animate loading steps — advance quickly so "Generating AI response" is visible
+    stepTimers.current.push(setTimeout(() => setLoadStep(1), 200));
+    stepTimers.current.push(setTimeout(() => setLoadStep(2), 800));
 
     try {
       const res = await fetch(`${API_BASE}/analyze`, {
