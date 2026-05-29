@@ -157,7 +157,7 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS — whitelist specific origins from env
+# CORS — explicit origins from env + wildcard for all *.vercel.app previews
 _raw_origins = os.getenv("CORS_ORIGINS", "http://localhost:5173,http://localhost:3000")
 ALLOWED_ORIGINS = [o.strip() for o in _raw_origins.split(",") if o.strip()]
 logger.info(f"CORS origins: {ALLOWED_ORIGINS}")
@@ -165,6 +165,7 @@ logger.info(f"CORS origins: {ALLOWED_ORIGINS}")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type", "Authorization"],
 )

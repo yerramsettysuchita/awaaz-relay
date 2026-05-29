@@ -68,15 +68,22 @@ const DEMO_QUERY = {
 };
 
 export default function InputPanel({ onSubmit, loading }) {
+  const [demoReady, setDemoReady] = useState(false);
+
   const runDemo = () => {
     setLanguage(DEMO_QUERY.lang);
     setInputType("text");
     setText(DEMO_QUERY.text);
-    const formData = new FormData();
-    formData.append("input_type", "text");
-    formData.append("language", DEMO_QUERY.lang);
-    formData.append("text", DEMO_QUERY.text);
-    onSubmit(formData);
+    setDemoReady(true);
+    // Small delay so judge can read the query before it fires
+    setTimeout(() => {
+      const formData = new FormData();
+      formData.append("input_type", "text");
+      formData.append("language", DEMO_QUERY.lang);
+      formData.append("text", DEMO_QUERY.text);
+      onSubmit(formData);
+      setDemoReady(false);
+    }, 1200);
   };
   const [inputType, setInputType] = useState("text");
   const [language, setLanguage]   = useState("ta");
@@ -233,9 +240,15 @@ export default function InputPanel({ onSubmit, loading }) {
             <textarea
               className="text-input"
               rows={5}
-              placeholder="Type your question in Tamil, Telugu, Kannada, Hindi, or English…"
+              placeholder="Type your question in Tamil, Telugu, Kannada, Hindi, or English… (Ctrl+Enter to submit)"
               value={text}
               onChange={(e) => setText(e.target.value)}
+              onKeyDown={(e) => {
+                if ((e.ctrlKey || e.metaKey) && e.key === "Enter" && text.trim() && !loading) {
+                  e.preventDefault();
+                  e.target.closest("form").requestSubmit();
+                }
+              }}
             />
 
             <div className="quick-queries">
@@ -383,10 +396,10 @@ export default function InputPanel({ onSubmit, loading }) {
           type="button"
           className="demo-run-btn"
           onClick={runDemo}
-          disabled={loading}
-          title="Auto-fill and submit a real widow pension query"
+          disabled={loading || demoReady}
+          title="Auto-fills a real widow pension query and submits it"
         >
-          ▶ Run Live Demo
+          {demoReady ? "⏳ Submitting…" : "▶ Run Live Demo"}
         </button>
         <span className="offline-badge">Grounded on 214 verified TN government facts</span>
       </div>

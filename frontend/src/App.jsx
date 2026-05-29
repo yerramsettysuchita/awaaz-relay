@@ -37,16 +37,16 @@ export default function App() {
   const stepTimers = useRef([]);
   const resultRef = useRef(null);
 
-  // Server health polling — retry with backoff so a cold-start shows "Starting up" not "offline"
+  // Aggressive pre-warm + health polling — ping immediately so Render wakes before user queries
   useEffect(() => {
     let retries = 0;
     const checkHealth = () => {
-      fetch(`${API_BASE}/health`, { signal: AbortSignal.timeout(8000) })
+      fetch(`${API_BASE}/health`, { signal: AbortSignal.timeout(10000) })
         .then((r) => r.ok ? r.json() : null)
         .then((data) => {
           if (!data) {
             retries++;
-            setServerStatus(retries <= 4 ? "starting" : "offline");
+            setServerStatus(retries <= 6 ? "starting" : "offline");
             return;
           }
           retries = 0;
@@ -55,12 +55,15 @@ export default function App() {
         })
         .catch(() => {
           retries++;
-          setServerStatus(retries <= 4 ? "starting" : "offline");
+          setServerStatus(retries <= 6 ? "starting" : "offline");
         });
     };
+    // Ping immediately, then again at 8s (catches slow cold starts), then every 30s
     checkHealth();
+    const t1 = setTimeout(checkHealth, 8000);
+    const t2 = setTimeout(checkHealth, 20000);
     const interval = setInterval(checkHealth, 30_000);
-    return () => clearInterval(interval);
+    return () => { clearTimeout(t1); clearTimeout(t2); clearInterval(interval); };
   }, []);
 
   // Apply dark mode to document root
@@ -162,7 +165,7 @@ export default function App() {
 
   const language = result?.language || "ta";
 
-  const statusLabel = { ok: "Ready", starting: "Starting up…", offline: "Server offline", unknown: "Checking…" }[serverStatus];
+  const statusLabel = { ok: "Ready", starting: "Waking up (~30s)…", offline: "Server offline", unknown: "Checking…" }[serverStatus];
   const statusClass = { ok: "online", starting: "starting", offline: "offline", unknown: "offline" }[serverStatus];
 
   return (
@@ -212,6 +215,12 @@ export default function App() {
           {error && (
             <div className="error-card card">
               <strong>Error:</strong> {error}
+              <button
+                className="retry-btn"
+                onClick={() => { setError(null); }}
+              >
+                ↩ Dismiss & retry
+              </button>
             </div>
           )}
         </section>

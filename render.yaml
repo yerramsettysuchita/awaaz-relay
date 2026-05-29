@@ -15,4 +15,4 @@ services:
       - key: RENDER_EXTERNAL_URL
         value: "https://awaaz-relay-api.onrender.com"
       - key: CORS_ORIGINS
-        value: "https://awaaz-relay-m0tz3ff17-yerramsettysuchitas-projects.vercel.app,https://awaaz-relay.vercel.app"
+        value: "https://awaaz-relay-m0tz3ff17-yerramsettysuchitas-projects.vercel.app,https://awaaz-relay.vercel.app,https://awaaz-relay-git-master-yerramsettysuchitas-projects.vercel.app"
